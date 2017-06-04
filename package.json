@@ -18,6 +18,9 @@
   "dependencies": {
     "chalk": "^1.1.3",
     "node-examples": "^1.1.0",
+    "node-keyboard-github": "^1.0.0",
+    "node-keyboard-mongo": "^1.3.0",
+    "node-keyboard-mouse": "^1.0.0",
     "node-keyboard-rx": "^1.0.1",
     "node-keyboard-shapes": "^1.5.1"
   },
