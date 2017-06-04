@@ -15,7 +15,9 @@
   "engines": {
     "node": ">=6.0.0"
   },
-  "dependencies": {},
+  "dependencies": {
+    "node-examples": "^1.1.0"
+  },
   "devDependencies": {
     "eslint": "^3.19.0"
   }
