@@ -1,0 +1,22 @@
+{
+  "name": "node-keyboard-talk-shapes",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "eslint ."
+  },
+  "keywords": [
+    "node-keyboard-talk-shapes"
+  ],
+  "author": "justin j. moses <justinjmoses@gmail.com>",
+  "license": "MIT",
+  "repository": "https://github.com/justinjmoses/node-keyboard-talk-shapes",
+  "engines": {
+    "node": ">=6.0.0"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^3.19.0"
+  }
+}
