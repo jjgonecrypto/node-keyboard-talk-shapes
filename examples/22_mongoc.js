@@ -7,6 +7,7 @@ const mongo = require('node-keyboard-mongo')
 module.exports = () => {
     const { tail, log, compose } = mongo
 
+    // > db.getSiblingDB('example').createCollection("log", { capped : true, size : 1024e3, max : 1000 } )
     const cursor = tail({
         uri: 'mongodb://localhost:26000',
         db: 'example',

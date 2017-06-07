@@ -7,9 +7,12 @@ const PI = '3.141592653589793238462643383279502884197169399375105820974944592307
 
 module.exports = (key = 'c', scaleName = 'major') => {
 
-    const cmaj = scale(`${key}3`, scaleName)
+    const keyWithOctave = /[0-9]/.test(key) ? key : key + '3'
+    const keyNextOctave = key.replace(/[0-9]/, found => Number(found) + 1)
 
-    const notes = cmaj.concat(scale(`${key}4`, scaleName))
+    const cmaj = scale(keyWithOctave, scaleName)
+
+    const notes = cmaj.concat(scale(keyNextOctave, scaleName))
 
     Rx.Observable.from(PI.split(''))
         .concatMap(d => Rx.Observable.of(d).delay(150))

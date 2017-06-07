@@ -11,7 +11,7 @@ module.exports = () => {
 
     const cursor = query({
         uri: 'mongodb://localhost:26000',
-        db: 'test',
+        db: 'example',
         collection: 'users',
         findQuery: {
             name: {
