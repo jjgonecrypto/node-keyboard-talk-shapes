@@ -1,9 +1,13 @@
-const { from, delay, on, toAudio, toPiano, toLogger } = require('repl').repl.context
+const { from, delay, on, toAudio, toPiano, toLogger, scale } = require('repl').repl.context
 
-module.exports = () =>
-    from('c','db','f','g','bb','c4','eb4','c4','bb','g','f','db')
-        .pipe(delay(300))
+module.exports = () => {
+    const goingUp = scale('c3', 'flamenco').concat(scale('c4', 'flamenco'))
+    const goingDown = goingUp.concat().reverse().slice(1, -1)
+
+    from(goingUp.concat(goingDown))
+        .pipe(delay(200))
         .pipe(on('banjo'))
         .pipe(toAudio)
         .pipe(toPiano)
         .pipe(toLogger)
+}
