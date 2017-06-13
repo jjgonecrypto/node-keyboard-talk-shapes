@@ -9,15 +9,17 @@ module.exports = (input) => {
     const { grey } = chalk
     const { stdout } = process
 
-    const mWords = morse.encode(input).split(' ')
+    const mWords = morse.encode(input).split('')
+    console.log(morse.encode(input))
 
     Rx.Observable.from(mWords)
-        .concatMap(word => Rx.Observable.of(word).delay(500))
-        .do(() => stdout.write(' '))
-        .flatMap(word => word.split(''))
-        .concatMap(letter => Rx.Observable.of(letter).delay(150))
+        .concatMap(letter => {
+            const delayBy = letter.trim() ? 100 : 200
+            return Rx.Observable.of(letter).delay(delayBy)
+        })
         .do(letter => stdout.write(grey(letter)))
-        .map(letter => letter === '.' ? instrument('electric_guitar_muted')('c') : instrument('piano')('g4'))
+        .filter(letter => letter.trim())
+        .map(letter => letter === '.' ? instrument('electric_guitar_muted')('c') : instrument('guitar')('g4'))
         .subscribe(play)
 
 }
