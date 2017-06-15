@@ -10,7 +10,6 @@ module.exports = (input) => {
     const { stdout } = process
 
     const mWords = morse.encode(input).split('')
-    console.log(morse.encode(input))
 
     Rx.Observable.from(mWords)
         .concatMap(letter => {
