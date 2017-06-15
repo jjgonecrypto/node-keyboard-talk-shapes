@@ -63,4 +63,24 @@ module.exports = {
         notes: ['eb1', 'gb3', 'bb2', 'db4'],
         onInstrument: 'pan_flute'
     },
+    'HTML': {
+        color: yellow,
+        notes: ['g4', 'c5', 'g3'],
+        onInstrument: 'steel_drums'
+    },
+    'Elixir': {
+        color: cyan,
+        notes: ['d2', 'a4', 'e5'],
+        onInstrument: 'muted_trumpet'
+    },
+    'Lua': {
+        color: magenta,
+        notes: ['a5', 'c6', 'e7', 'g6'],
+        onInstrument: 'recorder'
+    },
+    'Haskell': {
+        color: bgBlue,
+        notes: ['f#2', 'd3', 'a4', 'c#6'],
+        onInstrument: 'sax'
+    }
 }
